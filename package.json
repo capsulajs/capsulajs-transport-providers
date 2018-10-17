@@ -1,0 +1,8 @@
+{
+  "name": "capsulajs-transport-providers",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/capsulajs/capsulajs-transport-providers.git",
+  "author": "Taras Shedenko <taras.shedenko@jivygroup.com>",
+  "license": "MIT"
+}
