@@ -4,5 +4,11 @@
   "main": "index.js",
   "repository": "https://github.com/capsulajs/capsulajs-transport-providers.git",
   "author": "Taras Shedenko <taras.shedenko@jivygroup.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^3.1.3"
+  }
 }
