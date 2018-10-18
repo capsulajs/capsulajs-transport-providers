@@ -25,8 +25,8 @@ baseUrl - base URL of the service, being set by Constructor
 constructor(baseUrl: string) - base constructor, sets the baseUrl,
 call it in the Constructor of any subclasses
 
-dispatch<T, R>(request: T, api: string): Promise<R> - dispatching method,
+dispatch&lt;T, R&gt; (request: T, api: string): Promise&lt;R&gt; - dispatching method,
 simply dispatches a Request, returns a Promise with the Response (or a rejected one with an Error)
 
-finalize?(): Promise<null> - optional method,
+finalize?(): Promise&lt;null&gt; - optional method,
 implement it if a subclass needs to free resources
