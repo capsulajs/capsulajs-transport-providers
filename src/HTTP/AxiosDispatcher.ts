@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { Dispatcher } from 'api';
+import { Dispatcher } from '../api';
 
 export class AxiosDispatcher extends Dispatcher {
   dispatch<T, R>(request: T, api: string): Promise<R> {

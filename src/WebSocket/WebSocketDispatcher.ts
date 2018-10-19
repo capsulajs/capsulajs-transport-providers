@@ -1,11 +1,9 @@
-// @flow
-
 /*
 *  Send and receive requests serially
 *  next reuqest is only sent when the previous one got its response
 */
 
-import { Dispatcher } from 'api';
+import { Dispatcher } from '../api';
 
 const errorMessages = {
   notConnected: 'Not connected!',
