@@ -10,20 +10,6 @@
     "build": "tsc",
     "test": "jest"
   },
-  "jest": {
-    "transform": {
-      "\\.ts$": "ts-jest"
-    },
-    "testRegex": "tests/.*\\.test\\.ts$",
-    "moduleFileExtensions": [
-      "js",
-      "ts"
-    ],
-    "moduleDirectories": [
-      "node_modules",
-      "src"
-    ]
-  },
   "devDependencies": {
     "@types/jest": "^23.3.5",
     "jest": "^23.6.0",
