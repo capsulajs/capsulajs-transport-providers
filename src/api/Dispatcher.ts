@@ -10,7 +10,7 @@ export abstract class Dispatcher {
   };
 
   // Interface for the Dispatcher
-  abstract dispatch<T, R>(request: T, api: string): Promise<R>;
+  abstract dispatch<T, R>(api: string, request: T): Promise<R>;
 
   // Optional Destructor-like method
   finalize?(): Promise<null>;

@@ -2,7 +2,7 @@
 
 Impements Dispatcher-like transport providers for HTTP and WebSocket protocols.
 
-Base class:
+## Base class:
 ```javascript
 export abstract class Dispatcher {
   // Base URL
@@ -14,7 +14,7 @@ export abstract class Dispatcher {
   };
 
   // Interface for the Dispatcher
-  abstract dispatch<T, R>(request: T, api: string): Promise<R>;
+  abstract dispatch<T, R>(api: string, request: T): Promise<R>;
 
   // Optional Destructor-like method
   finalize?(): Promise<null>;
@@ -30,3 +30,21 @@ simply dispatches a Request, returns a Promise with the Response (or a rejected 
 
 finalize?(): Promise&lt;null&gt; - optional method,
 implement it if a subclass needs to free resources
+
+## AxiosDispatcher and WebSocketDispatcher
+Inherits from base Dispatcher class. Pass a base URL to its Constructor, then call the dispatch method, passing an end-point and a body of a request.
+
+```javascript
+import { AxiosDispatcher } from 'capsulajs-transport-providers';
+
+const dispatcher = new AxiosDispatcher('http://my-server.com');
+dispatcher.dispatch('/end-point', request)
+  .then(res => {
+    // Process the response
+  })
+  .catch(err => {
+    // Process the error
+  });
+```
+
+WebSocketDispatcher's usage is the same
