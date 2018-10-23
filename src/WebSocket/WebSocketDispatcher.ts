@@ -1,6 +1,6 @@
 /*
 *  Send and receive requests serially
-*  next reuqest is only sent when the previous one got its response
+*  next request is only sent when the previous one got its response
 */
 
 import { Dispatcher } from '../api';

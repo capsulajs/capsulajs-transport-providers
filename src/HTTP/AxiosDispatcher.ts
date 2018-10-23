@@ -6,6 +6,6 @@ export class AxiosDispatcher extends Dispatcher {
   dispatch<T, R>(api: string, request: T): Promise<R> {
     return axios.post(this.baseUrl + api, request)
       .then(response => response.data)
-      .catch(error => Promise.reject(error.response.data));
+      .catch(error => Promise.reject((error.response && error.response.data) || error));
   }
 };
