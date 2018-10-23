@@ -13,5 +13,5 @@ export abstract class Dispatcher {
   abstract dispatch<T, R>(api: string, request: T): Promise<R>;
 
   // Optional Destructor-like method
-  finalize?(): Promise<null>;
+  finalize?(): Promise<void>;
 };

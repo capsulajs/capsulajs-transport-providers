@@ -17,7 +17,7 @@ export abstract class Dispatcher {
   abstract dispatch<T, R>(api: string, request: T): Promise<R>;
 
   // Optional Destructor-like method
-  finalize?(): Promise<null>;
+  finalize?(): Promise<void>;
 };
 ```
 baseUrl - base URL of the service, being set by Constructor

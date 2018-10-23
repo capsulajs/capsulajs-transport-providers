@@ -15,15 +15,15 @@ export class WebSocketDispatcher extends Dispatcher {
   private webSocket?: WebSocket;
   private responseData: any;
 
-  open(): Promise<null> {
+  open(): Promise<void> {
 
     if (this.getState() === 'OPEN') {
-      return Promise.resolve(null);
+      return Promise.resolve();
     }
 
     return new Promise((resolve, reject) => {
       this.webSocket = new WebSocket(this.baseUrl);
-      this.webSocket.onopen = () => resolve(null);
+      this.webSocket.onopen = () => resolve();
       this.webSocket.onerror = error => reject(error);
     });
   }
@@ -81,16 +81,16 @@ export class WebSocketDispatcher extends Dispatcher {
     };
   }
 
-  finalize(): Promise<null> {
+  finalize(): Promise<void> {
     const { webSocket } = this;
     const state = this.getState();
 
     if (!webSocket || state === 'NONE' || state === 'CLOSED') {
-      return Promise.resolve(null);
+      return Promise.resolve();
     }
 
     return new Promise((resolve, reject) => {
-      webSocket.onclose = () => resolve(null);
+      webSocket.onclose = () => resolve();
       webSocket.onerror = () => reject();
       webSocket.close();
     });
