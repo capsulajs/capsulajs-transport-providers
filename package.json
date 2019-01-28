@@ -1,11 +1,13 @@
 {
-  "name": "capsulajs-transport-providers",
+  "name": "@capsulajs/capsulajs-transport-providers",
+  "author": "CapsulaJS",
+  "license": "MIT",
+  "keywords": ["microservice", "micro-frontend", "capsula"],
+  "description": "",
+  "repository": "github:capsulajs/capsulajs-transport-providers",
   "version": "0.1.0",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "repository": "https://github.com/capsulajs/capsulajs-transport-providers.git",
-  "author": "Taras Shedenko <taras.shedenko@jivygroup.com>",
-  "license": "MIT",
   "scripts": {
     "build": "tsc",
     "test": "jest"
