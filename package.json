@@ -3,7 +3,6 @@
   "author": "CapsulaJS",
   "license": "MIT",
   "keywords": ["microservice", "micro-frontend", "capsula"],
-  "description": "",
   "repository": "github:capsulajs/capsulajs-transport-providers",
   "version": "0.1.0",
   "main": "lib/index.js",
