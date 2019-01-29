@@ -35,7 +35,7 @@ implement it if a subclass needs to free resources
 Inherits from base Dispatcher class. Pass a base URL to its Constructor, then call the dispatch method, passing an end-point and a body of a request.
 
 ```javascript
-import { AxiosDispatcher } from 'capsulajs-transport-providers';
+import { AxiosDispatcher } from '@capsulajs/capsulajs-transport-providers';
 
 const dispatcher = new AxiosDispatcher('http://my-server.com');
 dispatcher.dispatch('/end-point', request)
